@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "StackBuddy",
   description:
     "StackBuddy is a collaborative platform for developers to ask questions, share answers, and solve coding challenges. Join the vibrant programming community today!",
-  // icons: {
-  //   icon: "/favicon.ico",
-  // },
+  icons: {
+    icon: "/icons/logo.svg",
+  },
 };
 
 export default function RootLayout({
