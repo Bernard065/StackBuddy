@@ -38,7 +38,11 @@ export default {
         "dark-200": "2px 0px 20px 0px rgba(39, 36, 36, 0.04)",
       },
       screens: {
-        xs: "420"
+        xs: "420px",
+      },
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        "space-grotesk": ['var(--font-space-grotesk)'],
       },
     },
   },
