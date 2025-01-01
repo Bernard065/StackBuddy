@@ -16,7 +16,7 @@ const NavBar = () => {
       <p>Global Search</p>
       <div className="flex-between gap-5">
         <ModeToggle />
-        <p>Auth</p>
+        <p>Auth icon</p>
       </div>
     </nav>
   );
