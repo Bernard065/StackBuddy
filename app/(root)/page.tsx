@@ -1,6 +1,11 @@
 import React from "react";
 
-const Home = () => {
+import { auth } from "@/auth";
+
+const Home = async () => {
+  const session = await auth();
+
+  console.log(session);
   return <div className=""></div>;
 };
 
