@@ -165,10 +165,37 @@
   .flex-start {
     @apply flex items-center justify-start;
   }
+  .primary-gradient {
+    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
+  }
+
+  .dark-gradient {
+    background: linear-gradient(
+      232deg,
+      rgba(23, 28, 35, 0.41) 0%,
+      rgba(19, 22, 28, 0.7) 100%
+    );
+  }
+  .light-gradient {
+    background: linear-gradient(
+      132deg,
+      rgba(247, 249, 255, 0.5) 0%,
+      rgba(229, 237, 255, 0.25) 100%
+    );
+  }
+  .primary-text-gradient {
+    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .invert-colors {
     @apply invert dark:invert-0;
   }
   .auth-button {
     @apply background-dark400_light900  body-medium text-dark200_light800 min-h-12 flex-1 rounded-2 px-4 py-3;
+  }
+  .no-focus {
+    @apply focus-visible:ring-0 focus-visible:ring-transparent;
   }
 }
