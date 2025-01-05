@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
+
+import MobileNavBar from "@/components/navigation/MobileNavBar";
 import { ModeToggle } from "@/components/navigation/ModeToggle";
 
 const NavBar = () => {
@@ -17,6 +18,7 @@ const NavBar = () => {
       <div className="flex-between gap-5">
         <ModeToggle />
         <p>Auth icon</p>
+        <MobileNavBar />
       </div>
     </nav>
   );
