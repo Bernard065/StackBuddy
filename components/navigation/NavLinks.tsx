@@ -3,9 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 
 import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
+
+import { SheetClose } from "../ui/sheet";
 
 const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
   const pathname = usePathname();
@@ -46,7 +49,13 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
           </Link>
         );
 
-        return LinkComponent;
+        return isMobileNav ? (
+          <SheetClose asChild key={item.route}>
+            {LinkComponent}
+          </SheetClose>
+        ) : (
+          <React.Fragment key={item.route}>{LinkComponent}</React.Fragment>
+        );
       })}
     </>
   );
