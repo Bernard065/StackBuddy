@@ -10,6 +10,7 @@ import { sidebarLinks } from "@/constants";
 import { cn } from "@/lib/utils";
 
 const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
+  const userId = 1;
   const pathname = usePathname();
 
   return (
@@ -18,6 +19,11 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
         const isActive =
           (pathname.includes(item.route) && item.route.length > 1) ||
           pathname === item.route;
+
+        if (item.route === "/profile") {
+          if (userId) item.route = `${item.route}/${userId}`;
+          else return null;
+        }
 
         const LinkComponent = (
           <Link
