@@ -6,7 +6,7 @@ const Home = async () => {
   const session = await auth();
 
   console.log(session);
-  return <div className=""></div>;
+  return <div className="">HOme</div>;
 };
 
 export default Home;
